@@ -137,8 +137,8 @@ h2 {
 
 .profile-photo {
   display: block;
-  width: 90%;
-  max-width: 90%;
+  width: 67.5%;
+  max-width: 67.5%;
   margin: 0 auto;
   aspect-ratio: 1;
   border-radius: 50%;
