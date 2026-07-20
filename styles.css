@@ -190,7 +190,6 @@ h2 {
 
 .one {
   position: relative;
-  isolation: isolate;
   width: 100%;
   max-width: none;
   aspect-ratio: 1 / 1;
@@ -207,21 +206,10 @@ h2 {
   background: #fff;
 }
 
-.one img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.two {
+.one > img,
+.one > video {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-
-.two video {
   display: block;
   width: 100%;
   height: 100%;
@@ -230,7 +218,12 @@ h2 {
   object-position: center center;
 }
 
-.two video {
+.one > img {
+  z-index: 0;
+}
+
+.one > video {
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -602,10 +595,6 @@ h2 {
     height: auto;
   }
 
-  .two {
-    width: 100%;
-    height: 100%;
-  }
 
   .muse-disclosure-row {
     display: block;
@@ -647,12 +636,6 @@ h2 {
 
   .magnetomicrometry-videos {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .two {
-    display: none;
   }
 }
 
