@@ -152,6 +152,20 @@ h2 {
   vertical-align: middle;
 }
 
+.intro-copy h2 {
+  font-size: 20px;
+}
+
+.intro-copy p,
+.intro-copy p a,
+.intro-copy p strong {
+  font-size: 14px;
+}
+
+.intro-copy p {
+  line-height: 1.5;
+}
+
 .paper-row {
   transition: background-color .15s ease-in-out;
 }
@@ -232,6 +246,54 @@ h2 {
     brightness(var(--magnet-video-brightness))
     contrast(var(--magnet-video-contrast))
     saturate(var(--magnet-video-saturation));
+}
+
+.bead-context {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 8px 0 0;
+  padding: 6px 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.bead-context-image {
+  position: relative;
+  display: block;
+  flex: 0 0 86px;
+  width: 86px;
+  height: 62px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #ddd;
+}
+
+.bead-context-image img {
+  position: absolute;
+  top: -45px;
+  left: -32px;
+  width: 119px;
+  height: auto;
+  max-width: none;
+}
+
+.bead-context figcaption,
+.bead-context figcaption strong {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.bead-context figcaption {
+  min-width: 0;
+  color: #555;
+}
+
+.bead-context figcaption strong {
+  display: block;
+  color: #222;
 }
 
 .muse-disclosure-row > td {
